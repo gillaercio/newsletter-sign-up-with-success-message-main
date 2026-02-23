@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+
+</head>
+<body>
+  <main class="newsletter">
+    <div class="newsletter__container">
+      <div class="newsletter__image"></div>
+
+      <!-- Sign-up form start -->
+      <section class="newsletter__card">
+        <h1 class="newsletter__card-title">Stay updated!</h1>
+        <p class="newsletter__description">Join 60,000+ product managers receiving monthly updates on:</p>
+
+        <form class="newsletter__form">
+          <ul class="newsletter__benefits">
+            <li>Product discovery and building what matters</li>
+            <li>Measuring to ensure updates are a success</li>
+            <li>And much more!</li>
+          </ul>
+
+          <div class="form__group">
+            <div class="form__label-wrapper">
+              <label class="label" for="form-email">Email address</label>
+              <small id="error-email" class="error-message"></small>
+            </div>
+
+            <input type="email" id="form-email" class="form-input" name="email" placeholder="email@company.com" required>
+          </div>
+
+          <button type="submit" id="form-button">
+            Subscribe to monthly newsletter
+          </button>
+        </form>
+      </section>
+      <!-- Sign-up form end -->
+
+      <!-- Success message start -->
+      <section class="newsletter__success is-hidden">
+        <h2 class="newsletter__success-title">Thanks for subscribing!</h2>
+        <p class="newsletter__description">
+          A confirmation email has been sent to <span>ash@loremcompany.com.</span>
+          Please open it and click the button inside to confirm your subscription.
+        </p>
+
+        <button type="button" id="dismiss__button">
+          Dismiss message
+        </button>
+      </section>
+      <!-- Success message end -->
+    </div>
+  </main>
+  
+</body>
+</html>
