@@ -14,13 +14,14 @@
 .newsletter__container {
   display: grid;
   /* grid-template-columns: 1fr 1fr; */
+  align-items: flex-start;
   background-color: var(--White);
   /* border-radius: 20px; */
   max-width: 375px;
 }
 
 .newsletter__image {
-  height: 300px;
+  height: 285px;
   background: url('../images/illustration-sign-up-mobile.svg');
   background-size: contain;
   background-repeat: no-repeat;
@@ -29,29 +30,79 @@
 .newsletter__card {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
-  padding: 2rem;
+  gap: 1.8rem;
+  padding: 3rem;
 }
 
 .newsletter__card-title {
   font: var(--text-feature);
-  color: var(--Blue-700);
-}
-
-.newsletter__description,
-li {
-  font: var(--text);
-  color: var(--Grey);
+  color: var(--Blue-800);
 }
 
 .newsletter__form {
   display: grid;
-  gap: 1.5rem;
+  gap: 2rem;
+}
+
+.newsletter__benefits {
+  list-style-type: none;
+}
+
+.newsletter__benefits li {
+  position: relative;
+  padding-left: 4.2rem;
+  margin-bottom: 0.7rem;
+}
+
+.newsletter__benefits li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 30%;
+  transform: translateY(-50%);
+  width: 22px;
+  height: 22px;
+  background-image: url('../images/icon-list.svg');
+  background-size: contain;
+  background-repeat: repeat;
+}
+
+.newsletter__benefits,
+.newsletter__description {
+  font: var(--text);
+  color: var(--Blue-700);
+  /* color: var(--Grey); */
+}
+
+.form__group {
+  display: grid;
+  gap: 0.5rem;
 }
 
 .label {
   font: var(--text-sm);
-  color: var(--Blue-700);
+  color: var(--Blue-800);
+}
+
+.form-input,
+#form-button,
+#dismiss-button {
+  width: 100%;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid var(--Grey);
+}
+
+.form-input::placeholder {
+  color: var(--Grey);
+  opacity: 1;
+}
+
+#form-button,
+#dismiss-button {
+  font: var(--text-button);
+  color: var(--White);
+  background-color: var(--Blue-800);
 }
 
 .is-hidden {

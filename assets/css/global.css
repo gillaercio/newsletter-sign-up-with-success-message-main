@@ -21,7 +21,7 @@ html {
 @font-face {
   font-family: 'Roboto';
   src: url('../fonts/roboto-v51-latin-700.woff2') format('woff2');
-  font-weight: 400;
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
@@ -36,7 +36,7 @@ html {
   --roboto: 'Roboto', sans-serif;
 
   --text-sm: 700 1.1rem/120% var(--roboto);
-  --text: 1.4rem/140% var(--roboto);
-  --text-button: 700 1.6rem/120% var(--roboto);
-  --text-feature: 700 3rem/120% var(--roboto);
+  --text: 1.6rem/160% var(--roboto);
+  --text-button: 700 1.4rem/120% var(--roboto);
+  --text-feature: 700 3.6rem/120% var(--roboto);
 }
