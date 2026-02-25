@@ -26,7 +26,7 @@ html {
   font-display: swap;
 }
 
-.root {
+:root {
   --Red: hsl(4, 100%, 67%);
   --Blue-800: hsl(234, 29%, 20%);
   --Blue-700: hsl(235, 18%, 26%);
@@ -35,8 +35,8 @@ html {
 
   --roboto: 'Roboto', sans-serif;
 
-  --text-sm: 700 1.2rem/120% var(--roboto);
-  --text: 1.6rem/120% var(--roboto);
+  --text-sm: 700 1.1rem/120% var(--roboto);
+  --text: 1.4rem/140% var(--roboto);
   --text-button: 700 1.6rem/120% var(--roboto);
-  --text-feature: 700 3.2rem/120% var(--roboto);
+  --text-feature: 700 3rem/120% var(--roboto);
 }

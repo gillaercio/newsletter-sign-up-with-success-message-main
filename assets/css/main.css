@@ -1,0 +1,59 @@
+/* body {
+  min-height: 100vh;
+} */
+
+.newsletter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--Blue-800);
+}
+
+.newsletter__container {
+  display: grid;
+  /* grid-template-columns: 1fr 1fr; */
+  background-color: var(--White);
+  /* border-radius: 20px; */
+  max-width: 375px;
+}
+
+.newsletter__image {
+  height: 300px;
+  background: url('../images/illustration-sign-up-mobile.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.newsletter__card {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.newsletter__card-title {
+  font: var(--text-feature);
+  color: var(--Blue-700);
+}
+
+.newsletter__description,
+li {
+  font: var(--text);
+  color: var(--Grey);
+}
+
+.newsletter__form {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.label {
+  font: var(--text-sm);
+  color: var(--Blue-700);
+}
+
+.is-hidden {
+  display: none;
+}
