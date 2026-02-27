@@ -25,6 +25,7 @@
   background: url('../images/illustration-sign-up-mobile.svg');
   background-size: contain;
   background-repeat: no-repeat;
+  /* display: none; */
 }
 
 .newsletter__card {
@@ -32,9 +33,11 @@
   grid-template-columns: 1fr;
   gap: 1.8rem;
   padding: 3rem;
+  /* display: none; */
 }
 
-.newsletter__card-title {
+.newsletter__card-title,
+.newsletter__success-title {
   font: var(--text-feature);
   color: var(--Blue-800);
 }
@@ -91,6 +94,7 @@
   padding: 2rem;
   border-radius: 8px;
   border: 1px solid var(--Grey);
+  cursor: pointer;
 }
 
 .form-input::placeholder {
@@ -107,4 +111,36 @@
 
 .is-hidden {
   display: none;
+  /* display: show; */
+}
+
+.newsletter__success {
+  height: 100vh;
+  /* display: grid; */
+  align-items: center;
+  padding: 3rem;
+}
+
+.newsletter__success-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.newsletter__success-image {
+  align-self: flex-start;
+  width: 50px;
+  height: 50px;
+  background: url('../images/icon-success.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.newsletter__description span {
+  font-weight: 700;
+}
+
+#dismiss-button {
+  align-self: flex-end;
 }
