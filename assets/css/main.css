@@ -111,7 +111,7 @@
 
 .is-hidden {
   display: none;
-  /* display: show; */
+  /* display: grid; */
 }
 
 .newsletter__success {
@@ -143,4 +143,37 @@
 
 #dismiss-button {
   align-self: flex-end;
+}
+
+@media screen and (min-width: 769px) {
+  .newsletter__container {
+    display: grid;
+    max-width: 992px;
+  }
+  
+  .newsletter__container .newsletter__image-background {
+    background: linear-gradient(to bottom, var(--Blue-800), var(--White));
+    background-color: white;
+  }
+
+  .newsletter__image {
+    height: 344px;
+    background: url('../images/illustration-sign-up-tablet.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .newsletter__success {
+    max-width: 503px;
+    justify-content: center;
+  }
+
+  .newsletter__success-container {
+    gap: 4rem;
+  }
+
+  .newsletter__success-title {
+    align-self: flex-start;
+    text-align: left;
+  }
 }
