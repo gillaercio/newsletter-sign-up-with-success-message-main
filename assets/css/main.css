@@ -99,7 +99,7 @@
 
 .form-input::placeholder {
   color: var(--Grey);
-  opacity: 1;
+  /* opacity: 1; */
 }
 
 #form-button,
@@ -107,6 +107,14 @@
   font: var(--text-button);
   color: var(--White);
   background-color: var(--Blue-800);
+  transition: box-shadow 0.1s ease;
+}
+
+#form-button:hover,
+#dismiss-button:hover {
+  background: linear-gradient(to right, var(--Red), var(--Orange));
+  border-color: transparent;
+  box-shadow: 1px 1px 10px var(--Red);
 }
 
 .is-hidden {
@@ -116,8 +124,9 @@
 
 .newsletter__success {
   height: 100vh;
-  /* display: grid; */
-  align-items: center;
+  /* display: flex; */
+  flex-direction: column;
+  justify-content: space-between;
   padding: 3rem;
 }
 
@@ -164,16 +173,89 @@
   }
 
   .newsletter__success {
-    max-width: 503px;
-    justify-content: center;
+    max-width: 500px;
+    /* justify-content: center; */
+    justify-content: space-around;
   }
 
   .newsletter__success-container {
     gap: 4rem;
+    /* border: 1px solid red; */
+  }
+
+  .newsletter__success-container .newsletter__description {
+    font-size: clamp(1.2rem, 2.93vw, 1.8rem);
   }
 
   .newsletter__success-title {
+    font-size: clamp(4.2rem, 2.93vw, 5rem);
     align-self: flex-start;
     text-align: left;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .newsletter__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.7rem;
+    max-width: 840px;
+    padding: 2rem;
+    border-radius: 20px;
+  }
+
+  /* .newsletter__container.success-mode {
+    display: none;
+    grid-template-columns: 1fr;
+    max-width: 460px;
+  } */
+  
+  .newsletter__container .newsletter__image-background {
+    background: linear-gradient(to bottom, var(--White), var(--White));
+  }
+  
+  .newsletter__image {
+    height: 563px;
+    max-width: 400px;
+    background: url('../images/illustration-sign-up-desktop.svg');
+    background-size: contain;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+  }
+  
+  .newsletter__card {
+    align-content: center;
+    height: 100%;
+    order: -1;
+  }
+
+  .newsletter__card-title {
+    font-size: clamp(3.6rem, 2.93vw, 5rem);
+  }
+
+  .newsletter__benefits li {
+    padding-left: 4rem;
+  }
+
+  .newsletter__benefits {
+    font-size: clamp(1.6rem, 2.93vw, 1.4rem);
+  }
+
+  .form-input,
+  #form-button,
+  #dismiss-button {
+    padding: 1rem;
+  }
+
+  .newsletter__success {
+    grid-column: 1 / -1;
+    gap: 1.5rem;
+    max-height: 350px;
+    max-width: 470px;
+    padding-top: 0;
+  }
+
+  .newsletter__success-container {
+    gap: 2rem;
   }
 }
