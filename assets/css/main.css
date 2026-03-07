@@ -1,7 +1,3 @@
-/* body {
-  min-height: 100vh;
-} */
-
 .newsletter {
   display: flex;
   align-items: center;
@@ -13,10 +9,8 @@
 
 .newsletter__container {
   display: grid;
-  /* grid-template-columns: 1fr 1fr; */
   align-items: flex-start;
   background-color: var(--White);
-  /* border-radius: 20px; */
   max-width: 375px;
 }
 
@@ -74,7 +68,6 @@
 .newsletter__description {
   font: var(--text);
   color: var(--Blue-700);
-  /* color: var(--Grey); */
 }
 
 .form__group {
@@ -82,9 +75,34 @@
   gap: 0.5rem;
 }
 
+.form__label-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
 .label {
   font: var(--text-sm);
   color: var(--Blue-800);
+}
+
+small.input-error {
+  font: var(--text-sm);
+  color: var(--Red);
+  justify-self: flex-end;
+}
+
+.form-input {
+  border: none;
+  outline: none;
+  /* border: 1px solid var(--Grey); */
+  /* border: 1px solid transparent; */
+}
+
+input.input-error,
+button.input-error {
+  color: var(--Red);
+  border: 2px solid var(--Red);
+  background-color: var(--Red-button);
 }
 
 .form-input,
@@ -99,7 +117,11 @@
 
 .form-input::placeholder {
   color: var(--Grey);
-  /* opacity: 1; */
+}
+
+.form-input:active,
+.form-input:focus {
+  border: 2px solid var(--Grey);
 }
 
 #form-button,
@@ -107,7 +129,13 @@
   font: var(--text-button);
   color: var(--White);
   background-color: var(--Blue-800);
+  outline: none;
   transition: box-shadow 0.1s ease;
+}
+
+#form-button:focus,
+#dismiss-button:focus {
+  border: 2px solid var(--Grey);
 }
 
 #form-button:hover,
@@ -162,7 +190,7 @@
   
   .newsletter__container .newsletter__image-background {
     background: linear-gradient(to bottom, var(--Blue-800), var(--White));
-    background-color: white;
+    background-color: var(--White);
   }
 
   .newsletter__image {
@@ -174,13 +202,11 @@
 
   .newsletter__success {
     max-width: 500px;
-    /* justify-content: center; */
     justify-content: space-around;
   }
 
   .newsletter__success-container {
     gap: 4rem;
-    /* border: 1px solid red; */
   }
 
   .newsletter__success-container .newsletter__description {
@@ -229,8 +255,13 @@
     order: -1;
   }
 
+  .newsletter__card .newsletter__description {
+    font-size: clamp(1rem, 0.75rem + 1.5vw, 1.4rem);
+  }
+
   .newsletter__card-title {
-    font-size: clamp(3.6rem, 2.93vw, 5rem);
+    /* font-size: clamp(3.6rem, 2.93vw, 6rem); */
+    font-size: clamp(3.2rem, 3.6rem + 1.5vw, 4.6rem);
   }
 
   .newsletter__benefits li {
@@ -238,7 +269,8 @@
   }
 
   .newsletter__benefits {
-    font-size: clamp(1.6rem, 2.93vw, 1.4rem);
+    /* font-size: clamp(1.6rem, 2.93vw, 1.4rem); */
+    font-size: clamp(1rem, 1rem + 1.5vw, 1.4rem);
   }
 
   .form-input,

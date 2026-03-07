@@ -28,6 +28,7 @@ html {
 
 :root {
   --Red: hsl(4, 100%, 67%);
+  --Red-button: hsla(4, 100%, 67%, 0.200);
   --Orange: hsl(21, 92%, 54%);
   --Blue-800: hsl(234, 29%, 20%);
   --Blue-700: hsl(235, 18%, 26%);
