@@ -94,14 +94,12 @@ small.input-error {
 .form-input {
   border: none;
   outline: none;
-  /* border: 1px solid var(--Grey); */
-  /* border: 1px solid transparent; */
 }
 
 input.input-error,
 button.input-error {
   color: var(--Red);
-  border: 2px solid var(--Red);
+  border: 1px solid var(--Red);
   background-color: var(--Red-button);
 }
 
@@ -119,11 +117,6 @@ button.input-error {
   color: var(--Grey);
 }
 
-.form-input:active,
-.form-input:focus {
-  border: 2px solid var(--Grey);
-}
-
 #form-button,
 #dismiss-button {
   font: var(--text-button);
@@ -133,9 +126,11 @@ button.input-error {
   transition: box-shadow 0.1s ease;
 }
 
+.form-input:active,
+.form-input:focus,
 #form-button:focus,
 #dismiss-button:focus {
-  border: 2px solid var(--Grey);
+  border: 1px solid var(--Blue-700);
 }
 
 #form-button:hover,
