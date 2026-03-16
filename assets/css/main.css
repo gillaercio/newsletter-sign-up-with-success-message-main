@@ -19,7 +19,6 @@
   background: url('../images/illustration-sign-up-mobile.svg');
   background-size: contain;
   background-repeat: no-repeat;
-  /* display: none; */
 }
 
 .newsletter__card {
@@ -27,7 +26,6 @@
   grid-template-columns: 1fr;
   gap: 1.8rem;
   padding: 3rem;
-  /* display: none; */
 }
 
 .newsletter__card-title,
@@ -142,12 +140,10 @@ button.input-error {
 
 .is-hidden {
   display: none;
-  /* display: grid; */
 }
 
 .newsletter__success {
   height: 100vh;
-  /* display: flex; */
   flex-direction: column;
   justify-content: space-between;
   padding: 3rem;
@@ -224,15 +220,15 @@ button.input-error {
     padding: 2rem;
     border-radius: 20px;
   }
-
-  /* .newsletter__container.success-mode {
-    display: none;
-    grid-template-columns: 1fr;
-    max-width: 460px;
-  } */
   
   .newsletter__container .newsletter__image-background {
     background: linear-gradient(to bottom, var(--White), var(--White));
+    transition: border-radius .25s ease;
+  }
+
+  .newsletter__container:focus-within .newsletter__image-background {
+    border-radius: 0;
+    background: var(--Red);
   }
   
   .newsletter__image {
@@ -240,7 +236,6 @@ button.input-error {
     max-width: 400px;
     background: url('../images/illustration-sign-up-desktop.svg');
     background-size: contain;
-    /* background-position: center; */
     background-repeat: no-repeat;
   }
   
@@ -255,7 +250,6 @@ button.input-error {
   }
 
   .newsletter__card-title {
-    /* font-size: clamp(3.6rem, 2.93vw, 6rem); */
     font-size: clamp(3.2rem, 3.6rem + 1.5vw, 4.6rem);
   }
 
@@ -264,7 +258,6 @@ button.input-error {
   }
 
   .newsletter__benefits {
-    /* font-size: clamp(1.6rem, 2.93vw, 1.4rem); */
     font-size: clamp(1rem, 1rem + 1.5vw, 1.4rem);
   }
 
