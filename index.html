@@ -22,7 +22,7 @@
         <h1 class="newsletter__card-title">Stay updated!</h1>
         <p class="newsletter__description">Join 60,000+ product managers receiving monthly updates on:</p>
 
-        <form class="newsletter__form">
+        <form class="newsletter__form" novalidate>
           <ul class="newsletter__benefits">
             <li>Product discovery and building what matters</li>
             <li>Measuring to ensure updates are a success</li>
@@ -32,13 +32,13 @@
           <div class="form__group">
             <div class="form__label-wrapper">
               <label class="label" for="form-email">Email address</label>
-              <small id="error-email" class="error-message"></small>
+              <small id="error-email" class="error-message is-hidden"></small>
             </div>
 
             <input type="email" id="form-email" class="form-input" name="email" placeholder="email@company.com" required>
           </div>
 
-          <button type="submit" id="form-button" onclick="sendButton(event)">
+          <button type="submit" id="form-button">
             Subscribe to monthly newsletter
           </button>
         </form>
@@ -55,7 +55,7 @@
           </p>
         </div>
 
-        <button type="button" id="dismiss-button" onclick="backButton(event)">
+        <button type="button" id="dismiss-button">
           Dismiss message
         </button>
       </section>
