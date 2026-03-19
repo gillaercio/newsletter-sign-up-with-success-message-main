@@ -153,6 +153,7 @@ button.input-error {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  min-height: 90%;
   align-items: center;
 }
 
